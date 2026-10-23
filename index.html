@@ -138,6 +138,29 @@
 .diana-status[data-open="false"] .diana-status-dot{background:#dc6060;box-shadow:0 0 0 4px #dc606024}
 @media(max-width:850px){.diana-hours-grid{grid-template-columns:1fr 1fr}.diana-status{grid-column:1/-1}}
 @media(max-width:560px){.diana-hours-grid{grid-template-columns:1fr}.diana-status{grid-column:auto}.diana-hour-card{padding:15px}}
+</style><style>
+/* Campañas semanales: la fecha se evalúa en horario de Mérida. */
+.daily-deal-layer{position:fixed;inset:0;z-index:12000;background:rgba(13,23,48,.76);display:none;align-items:center;justify-content:center;padding:18px;overflow-y:auto}
+.daily-deal-layer.show{display:flex}
+.daily-deal-dialog{position:relative;width:min(100%,690px);border-radius:27px;background:#fff;overflow:hidden;box-shadow:0 26px 80px #060f2d7a;color:#182843;animation:dealIn .26s ease-out}
+@keyframes dealIn{from{opacity:0;transform:translateY(15px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.daily-deal-top{padding:32px 32px 25px;text-align:center;background:linear-gradient(120deg,#263e93,#604cb0);color:#fff}
+.daily-deal-tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:1.1px;border-radius:40px;border:1px solid #ffffff70;background:#ffffff22;padding:9px 17px;margin-bottom:15px}
+.daily-deal-top h2{font-size:clamp(28px,5vw,43px);letter-spacing:-1px;line-height:1.1;margin:0 0 12px}
+.daily-deal-top p{color:#e5e7ff;margin:0 auto;max-width:450px;font-size:15px;line-height:1.5}
+.daily-deal-close{position:absolute;right:15px;top:14px;border:1px solid #ffffff60;border-radius:50%;color:white;background:#ffffff2e;width:38px;height:38px;font-size:25px;line-height:1;cursor:pointer}
+.daily-deal-content{padding:25px 30px 28px}
+.daily-deal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.daily-deal-item{border:1px solid #e0e6f3;background:#f8faff;border-radius:17px;padding:18px 14px;text-align:center}
+.daily-deal-emoji{font-size:42px;margin:2px 0 10px}
+.daily-deal-item h3{font-size:20px;margin:0 0 8px}
+.daily-deal-item p{color:#617087;font-size:13px;margin:0 0 15px;line-height:1.5;min-height:40px}
+.daily-deal-item button,.daily-deal-dismiss{font:inherit;cursor:pointer;border:0;border-radius:11px;padding:11px 15px;font-weight:750;background:#4263e5;color:#fff;width:100%}
+.daily-deal-dismiss{display:block;margin:20px auto 0;width:auto;min-width:175px;background:#e9efff;color:#263c88}
+.daily-deal-note{text-align:center;font-size:12px;color:#69768e;line-height:1.5;margin:15px 0 0}
+.deal-preview-button{position:fixed;right:14px;bottom:14px;z-index:4;border:1px solid #bfceee;background:#fff;color:#3153ac;border-radius:40px;padding:10px 15px;font:700 12px Inter,system-ui,sans-serif;box-shadow:0 4px 18px #18284322;cursor:pointer}
+@media(max-width:510px){.daily-deal-top{padding:29px 18px 23px}.daily-deal-content{padding:18px 16px 24px}.daily-deal-grid{grid-template-columns:1fr;gap:10px}.daily-deal-item{padding:12px 15px}.daily-deal-item p{min-height:0}.daily-deal-item h3{font-size:18px}.daily-deal-emoji{font-size:33px}.daily-deal-layer{align-items:flex-start}.daily-deal-dialog{margin:auto 0}}
+@media(prefers-reduced-motion:reduce){.daily-deal-dialog{animation:none}}
 </style></head><body><header><div class="wrap nav"><div class="logo" id="secret-logo" role="button" tabindex="0" aria-label="Abarrotes La Diana">Abarrotes <span>La Diana</span></div><button class="cartbtn" onclick="toggleCart(true)">🛒 Carrito (<span id="count">0</span>)</button></div></header><section class="diana-hours" aria-label="Horarios de Abarrotes La Diana">
   <div class="wrap diana-hours-grid">
     <div class="diana-hour-card diana-status" id="diana-store-status" data-open="unknown">
@@ -310,5 +333,46 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden)restartHer
   updateBusinessStatus();
   setInterval(updateBusinessStatus,30000);
   document.addEventListener('visibilitychange',function(){if(!document.hidden)updateBusinessStatus()});
+})();
+</script><div id="daily-deal-layer" class="daily-deal-layer" role="dialog" aria-modal="true" aria-labelledby="daily-deal-title" aria-hidden="true">
+  <div class="daily-deal-dialog">
+    <div class="daily-deal-top">
+      <button type="button" class="daily-deal-close" onclick="closeDailyDeal()" aria-label="Cerrar ofertas">×</button>
+      <div class="daily-deal-tag">✨ ESPECIAL DE LOS VIERNES ✨</div>
+      <h2 id="daily-deal-title">¡Viernes de gustitos!</h2>
+      <p>Consiente tu antojo con nuestros deliciosos frappés y helados. 🍨</p>
+    </div>
+    <div class="daily-deal-content">
+      <div class="daily-deal-grid">
+        <div class="daily-deal-item"><div class="daily-deal-emoji">🧋</div><h3>Frappés</h3><p>Refréscate con uno de nuestros frappés favoritos.</p><button type="button" onclick="exploreDailyDeal('Frappés, crepas y sodas')">Ver frappés</button></div>
+        <div class="daily-deal-item"><div class="daily-deal-emoji">🍨</div><h3>Helados</h3><p>Prueba tiramisú, aguacate, pan de muerto o calabaza.</p><button type="button" onclick="exploreDailyDeal('Helados')">Ver helados</button></div>
+      </div>
+      <p class="daily-deal-note">Promoción destacada del viernes. Consulta los precios y presentaciones disponibles en el catálogo.</p>
+      <button class="daily-deal-dismiss" type="button" onclick="closeDailyDeal()">Seguir viendo la tienda</button>
+    </div>
+  </div>
+</div>
+<button type="button" class="deal-preview-button" onclick="openDailyDeal()" title="Solo versión de pruebas">👀 Probar ventana de ofertas</button><script>
+(function(){
+  const zone='America/Merida';
+  const promoLayer=document.getElementById('daily-deal-layer');
+  const todayParts=()=>new Intl.DateTimeFormat('en-US',{timeZone:zone,weekday:'short',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const getValue=(parts,key)=>parts.find(p=>p.type===key)?.value||'';
+  window.openDailyDeal=function(){promoLayer.classList.add('show');promoLayer.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';promoLayer.querySelector('.daily-deal-close').focus();};
+  window.closeDailyDeal=function(){promoLayer.classList.remove('show');promoLayer.setAttribute('aria-hidden','true');document.body.style.overflow='';};
+  window.exploreDailyDeal=function(category){closeDailyDeal();
+    const button=Array.from(document.querySelectorAll('.cat')).find(el=>el.textContent.includes(category==='Helados'?'Helados':'Frappés'));
+    if(button && typeof setCategory==='function')setCategory(category,button);
+    const search=document.getElementById('search');if(search){search.value='';if(typeof renderProducts==='function')renderProducts();}
+    document.getElementById('products')?.scrollIntoView({behavior:'smooth',block:'start'});
+  };
+  promoLayer.addEventListener('click',event=>{if(event.target===promoLayer)closeDailyDeal();});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&promoLayer.classList.contains('show'))closeDailyDeal();});
+  const parts=todayParts();
+  if(getValue(parts,'weekday')==='Fri'){
+    const key=['abarrotesLaDianaDailyOffer',getValue(parts,'year'),getValue(parts,'month'),getValue(parts,'day')].join(':');
+    let already=false;try{already=sessionStorage.getItem(key)==='seen';sessionStorage.setItem(key,'seen');}catch(e){}
+    if(!already)openDailyDeal();
+  }
 })();
 </script></body></html>
