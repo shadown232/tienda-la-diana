@@ -105,7 +105,7 @@
 .pearl-buttons button{padding:12px 16px;border-radius:10px;border:1px solid #94a3b8;cursor:pointer}
 .pearl-buttons button:last-child{background:#2563eb;border-color:#2563eb;color:white;font-weight:700}
 @media(max-width:380px){.pearl-choices{grid-template-columns:1fr}}
-</style><style>.preview-banner{background:#eaf2ff;color:#2944ae;border-bottom:1px solid #cddafa;padding:9px 15px;text-align:center;font-size:13px;font-weight:800;letter-spacing:.15px}</style><style>
+</style><style></style><style>
 .icecream-overlay{position:fixed;inset:0;background:rgba(17,29,55,.70);z-index:100001;display:none;align-items:center;justify-content:center;padding:18px}
 .icecream-overlay.show{display:flex}
 .icecream-dialog{position:relative;width:min(100%,480px);border-radius:24px;padding:29px 24px;background:#fff;box-shadow:0 28px 95px #07132c55;text-align:center;color:#1c2c4f;font-family:Inter,system-ui,sans-serif}
@@ -119,7 +119,45 @@
 .icecream-amount{color:#2747bf;font-size:20px;white-space:nowrap}.icecream-error{color:#b42318;font-weight:700;font-size:13px;margin:9px 0}
 .icecream-error[hidden]{display:none}.icecream-actions{display:flex;gap:10px;margin-top:18px}.icecream-actions button{flex:1;padding:13px 10px;font-size:14px;font-weight:750;border-radius:11px;border:1px solid #d5deed;background:#f5f7fb;color:#35476e;cursor:pointer}.icecream-actions button:last-child{background:#4263eb;border-color:#4263eb;color:#fff}
 @media(max-width:400px){.icecream-dialog{padding:24px 15px}.icecream-amount{font-size:18px}}
-</style></head><body><div class="preview-banner">🧪 VERSIÓN DE PRUEBAS · SIN PUBLICAR · NUEVA CATEGORÍA HELADOS</div><header><div class="wrap nav"><div class="logo" id="secret-logo" role="button" tabindex="0" aria-label="Abarrotes La Diana">Abarrotes <span>La Diana</span></div><button class="cartbtn" onclick="toggleCart(true)">🛒 Carrito (<span id="count">0</span>)</button></div></header><section class="hero" aria-label="Presentaciones de la tienda">
+</style><style>
+/* Horarios de Abarrotes La Diana — zona horaria de Merida */
+.diana-hours{background:#f5f7fc;border-bottom:1px solid #dfe6f3;padding:17px 0 19px}
+.diana-hours-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:12px}
+.diana-hour-card{display:flex;align-items:center;gap:13px;padding:18px;background:white;border-radius:17px;border:1px solid #e1e7f1;box-shadow:0 5px 17px #16245108;min-width:0}
+.diana-hour-icon{width:44px;height:44px;flex-shrink:0;display:grid;place-items:center;background:#edf1ff;border-radius:13px;font-size:23px}
+.diana-hour-heading{font-size:11px;font-weight:850;letter-spacing:.7px;text-transform:uppercase;color:#667592;margin:0 0 6px}
+.diana-hour-value{font-size:16px;color:#182b4a;font-weight:800;line-height:1.35;margin:0}
+.diana-hour-sub{font-size:12px;color:#6b7890;margin:5px 0 0;line-height:1.4}
+.diana-status[data-open="true"]{background:#edfbf2;border-color:#b9e6ca}
+.diana-status[data-open="false"]{background:#fff3f1;border-color:#f0cac4}
+.diana-status-text{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:850;color:#42516a}
+.diana-status[data-open="true"] .diana-status-text{color:#18723f}
+.diana-status[data-open="false"] .diana-status-text{color:#a33d3d}
+.diana-status-dot{width:10px;height:10px;flex-shrink:0;border-radius:50%;background:#94a3b8}
+.diana-status[data-open="true"] .diana-status-dot{background:#1ca45b;box-shadow:0 0 0 4px #1ca45b24}
+.diana-status[data-open="false"] .diana-status-dot{background:#dc6060;box-shadow:0 0 0 4px #dc606024}
+@media(max-width:850px){.diana-hours-grid{grid-template-columns:1fr 1fr}.diana-status{grid-column:1/-1}}
+@media(max-width:560px){.diana-hours-grid{grid-template-columns:1fr}.diana-status{grid-column:auto}.diana-hour-card{padding:15px}}
+</style></head><body><header><div class="wrap nav"><div class="logo" id="secret-logo" role="button" tabindex="0" aria-label="Abarrotes La Diana">Abarrotes <span>La Diana</span></div><button class="cartbtn" onclick="toggleCart(true)">🛒 Carrito (<span id="count">0</span>)</button></div></header><section class="diana-hours" aria-label="Horarios de Abarrotes La Diana">
+  <div class="wrap diana-hours-grid">
+    <div class="diana-hour-card diana-status" id="diana-store-status" data-open="unknown">
+      <div class="diana-hour-icon" aria-hidden="true">🏪</div>
+      <div>
+        <p class="diana-hour-heading">Estado de la tienda</p>
+        <div class="diana-status-text" role="status" aria-live="polite"><span class="diana-status-dot"></span><span id="diana-status-label">Comprobando horario…</span></div>
+        <p class="diana-hour-sub" id="diana-status-detail">Horario local de Mérida, Yucatán</p>
+      </div>
+    </div>
+    <div class="diana-hour-card">
+      <div class="diana-hour-icon" aria-hidden="true">🕗</div>
+      <div><p class="diana-hour-heading">Apertura y cierre</p><p class="diana-hour-value">8:00 a. m. – 6:00 p. m.</p><p class="diana-hour-sub">Todos los días</p></div>
+    </div>
+    <div class="diana-hour-card">
+      <div class="diana-hour-icon" aria-hidden="true">🛵</div>
+      <div><p class="diana-hour-heading">Pedidos y entregas</p><p class="diana-hour-value">11:00 a. m. – 6:00 p. m.</p><p class="diana-hour-sub" id="diana-delivery-status">Martes a sábado</p></div>
+    </div>
+  </div>
+</section><section class="hero" aria-label="Presentaciones de la tienda">
 <div class="wrap hero-carousel">
   <div class="hero-slide active" aria-hidden="false"><div class="tag">ABARROTES LA DIANA</div><h1>¡Bienvenido a Abarrotes La Diana!</h1><p>Abarrotes, botanas, refrescos y antojitos en un solo lugar. Elige una categoría y arma tu pedido.</p><span class="slide-emoji" aria-hidden="true">🛒</span></div>
   <div class="hero-slide" aria-hidden="true"><div class="tag">PROMOCIONES</div><h1>¡Descubre nuestras promociones!</h1><p>Consulta las novedades y pregunta por las promociones disponibles de la tienda.</p><span class="slide-emoji" aria-hidden="true">🎉</span></div>
@@ -252,4 +290,25 @@ document.addEventListener('visibilitychange',()=>{if(!document.hidden)restartHer
     <p class="icecream-error" id="icecream-error" role="alert" hidden>Selecciona una presentación para continuar.</p>
     <div class="icecream-actions"><button type="button" onclick="closeIceCreamModal()">Cancelar</button><button type="button" onclick="confirmIceCream()">Agregar al carrito</button></div>
   </div>
-</div></body></html>
+</div><script>
+(function(){
+  const zone='America/Merida';
+  function updateBusinessStatus(){
+    const formatted=new Intl.DateTimeFormat('en-US',{timeZone:zone,weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false,hourCycle:'h23'}).formatToParts(new Date());
+    const parts=Object.fromEntries(formatted.filter(p=>p.type!=='literal').map(p=>[p.type,p.value]));
+    const hour=Number(parts.hour)%24,minute=Number(parts.minute),minutes=hour*60+minute;
+    const isOpen=minutes>=8*60 && minutes<18*60;
+    const isDeliveryDay=['Tue','Wed','Thu','Fri','Sat'].includes(parts.weekday);
+    const deliveryAvailable=isDeliveryDay && minutes>=11*60 && minutes<18*60;
+    const banner=document.getElementById('diana-store-status');
+    if(!banner)return;
+    banner.dataset.open=String(isOpen);
+    document.getElementById('diana-status-label').textContent=isOpen?'¡La tienda está abierta!':'La tienda está cerrada';
+    document.getElementById('diana-status-detail').textContent=isOpen?'Cerramos a las 6:00 p. m.':'Abrimos a las 8:00 a. m.';
+    document.getElementById('diana-delivery-status').textContent=deliveryAvailable?'Martes a sábado · Servicio disponible ahora':'Martes a sábado';
+  }
+  updateBusinessStatus();
+  setInterval(updateBusinessStatus,30000);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)updateBusinessStatus()});
+})();
+</script></body></html>
