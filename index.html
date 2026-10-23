@@ -1,39 +1,255 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#172451">
-<meta name="description" content="Tienda La Diana se encuentra temporalmente cerrada. Volveremos pronto.">
-<title>Tienda La Diana | Temporalmente cerrada</title>
-<style>
-:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172445;background:#f5f7fd}
-*{box-sizing:border-box}
-body{margin:0;min-height:100svh;display:grid;place-items:center;padding:30px 18px;background:radial-gradient(circle at 17% 12%,#e2eafe 0,transparent 38%),radial-gradient(circle at 86% 85%,#fceecf 0,transparent 37%),#f5f7fd}
-main{width:min(100%,610px);background:#fff;border:1px solid #e4eaf5;border-radius:28px;padding:clamp(32px,7vw,64px) clamp(22px,6vw,52px);text-align:center;box-shadow:0 25px 85px #17244518}
-.icon{width:94px;height:94px;border-radius:26px;display:grid;place-items:center;margin:0 auto 26px;background:#eef2ff;font-size:50px}
-.brand{font-size:16px;text-transform:uppercase;letter-spacing:2.6px;color:#3d55ac;font-weight:850;margin:0 0 13px}
-.status{display:inline-flex;align-items:center;gap:9px;border-radius:99px;padding:9px 15px;background:#fff4e5;color:#92530f;font-size:13px;font-weight:800;margin:0 0 23px}
-.status-dot{width:9px;height:9px;border-radius:50%;background:#df9224}
-h1{font-size:clamp(30px,6vw,46px);line-height:1.13;letter-spacing:-1.3px;color:#172451;margin:0 0 18px}
-p{font-size:17px;line-height:1.7;color:#586780;margin:0}
-.divider{height:1px;background:#e9edf5;margin:29px 0 23px}
-.note{font-size:15px;color:#506080}
-.heart{color:#d39a3a}
-footer{font-size:12px;color:#8190aa;margin-top:26px}
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Abarrotes La Diana | Catálogo</title><style>:root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#18233b;background:#f6f8fc}*{box-sizing:border-box}body{margin:0}header{background:#fff;border-bottom:1px solid #e5eaf2;position:sticky;top:0;z-index:2}.wrap{max-width:1100px;margin:auto;padding:0 22px}.nav{display:flex;align-items:center;justify-content:space-between;height:76px}.logo{font-size:23px;font-weight:850;letter-spacing:-.8px}.logo span{color:#4263eb}.cartbtn,.btn{border:0;border-radius:12px;padding:12px 17px;cursor:pointer;font-weight:750}.cartbtn{background:#edf1ff;color:#2944ae}.hero{background:linear-gradient(115deg,#202c61,#4769d9);color:white;padding:55px 0}.hero h1{font-size:clamp(32px,5vw,52px);margin:0 0 12px;letter-spacing:-1.6px}.hero p{color:#e0e8ff;font-size:17px;max-width:540px;line-height:1.6}.tag{display:inline-block;background:#ffffff2c;border:1px solid #ffffff44;border-radius:30px;padding:6px 13px;margin-bottom:16px;font-size:12px;font-weight:800;letter-spacing:.7px}.sectiontop{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:34px 0 22px}.sectiontop h2{margin:0;font-size:26px}input{border:1px solid #d9e0eb;padding:12px 15px;border-radius:12px;font:inherit;min-width:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-bottom:70px}.product{background:white;border:1px solid #e6eaf1;border-radius:19px;overflow:hidden;box-shadow:0 5px 22px #1c2a5110}.picture{height:200px;display:grid;place-items:center;background:linear-gradient(135deg,#e7edff,#f9eefa);font-size:86px}.body{padding:20px}.muted{color:#77849b;font-size:13px}.body h3{margin:7px 0 8px}.desc{color:#6c7890;font-size:14px;line-height:1.5;min-height:42px}.bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:20px}.price{font-size:23px;font-weight:850}.btn{background:#4164e9;color:#fff}.btn:hover{background:#294edc}.shade{position:fixed;inset:0;background:#101a36a1;z-index:5;display:none}.shade.show{display:block}.panel{position:fixed;right:0;top:0;height:100%;width:min(440px,100%);background:#fff;z-index:6;transform:translateX(105%);transition:transform .25s;box-shadow:-15px 0 45px #0002;display:flex;flex-direction:column}.panel.show{transform:translateX(0)}.panelhead{padding:24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e9edf3}.panelhead h2{margin:0}.close{border:0;background:#eef1f8;border-radius:10px;font-size:22px;padding:6px 12px;cursor:pointer}.items{flex:1;overflow:auto;padding:18px 24px}.item{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #edf0f5;padding:14px 0;gap:12px}.qty{display:flex;align-items:center;gap:10px}.qty button{background:#edf1ff;border:0;border-radius:8px;width:30px;height:30px;cursor:pointer;font-size:18px}.foot{padding:22px 24px;border-top:1px solid #e9edf3}.total{display:flex;justify-content:space-between;font-size:21px;font-weight:800;margin-bottom:17px}.foot .btn{width:100%;padding:15px}.note{font-size:12px;color:#8490a2;text-align:center;line-height:1.5}footer{text-align:center;padding:30px;color:#8b96aa}@media(max-width:750px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.picture{height:155px;font-size:64px}}@media(max-width:480px){.grid{grid-template-columns:1fr}.sectiontop{align-items:stretch;flex-direction:column}.hero{padding:36px 0}.picture{height:190px}}.piece-select{width:76px;padding:10px 7px;border:1px solid #d9e0eb;border-radius:10px;font:inherit}.purchase{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}.purchase .btn{flex:1}.categories{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 24px}.cat{padding:12px 16px;border-radius:12px;border:1px solid #dce3f1;background:white;color:#26385e;font:inherit;font-weight:700;cursor:pointer}.cat.active,.cat:hover{background:#4164e9;color:white;border-color:#4164e9}.cat:focus-visible{outline:3px solid #ffb84a;outline-offset:2px}.piece-stepper{display:inline-flex;align-items:center;flex-direction:row;border:1px solid #d9e0eb;border-radius:12px;overflow:hidden;background:white}.piece-stepper button{width:40px;height:42px;border:0;background:#edf1ff;color:#2944ae;font-size:23px;font-weight:800;cursor:pointer}.piece-stepper button:hover{background:#dbe4ff}.piece-stepper .piece-select{width:53px;height:42px;padding:5px 2px;text-align:center;border:0;border-radius:0;appearance:textfield;-moz-appearance:textfield;font-weight:800}.piece-stepper .piece-select::-webkit-inner-spin-button,.piece-stepper .piece-select::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.purchase{align-items:center}.added-notice{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#20366f;color:white;padding:13px 22px;border-radius:12px;box-shadow:0 8px 24px #0003;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:4;font-weight:700;text-align:center}.added-notice.visible{opacity:1;transform:translate(-50%,0)} .cart-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}.delete-product{width:38px;height:38px;display:grid;place-items:center;border:1px solid #fecaca;background:#fff1f2;color:#dc2626;border-radius:10px;cursor:pointer;padding:7px}.delete-product:hover{background:#fee2e2}.delete-product svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.item>div:first-child{min-width:0;overflow-wrap:anywhere}.item-info{flex:1;min-width:0}.item-title{display:flex;align-items:center;justify-content:flex-start;gap:8px}.item-title strong{min-width:0;overflow-wrap:anywhere}.item .cart-actions{flex-shrink:0}.foot-actions{display:flex;align-items:stretch;gap:10px}.foot .foot-actions .btn{flex:1;width:auto}.clear-cart{width:49px;flex:0 0 49px;display:grid;place-items:center;background:#fff1f2;border:1px solid #fecaca;color:#dc2626;border-radius:12px;cursor:pointer}.clear-cart:hover{background:#fee2e2}.clear-cart:disabled{opacity:.45;cursor:not-allowed}.clear-cart svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.confirm-shade{position:fixed;inset:0;background:#101a36a1;z-index:10;display:none;align-items:center;justify-content:center;padding:20px}.confirm-shade.show{display:flex}.confirm-box{background:#fff;border-radius:18px;padding:25px;width:min(340px,100%);box-shadow:0 18px 50px #0003;text-align:center}.confirm-box h3{margin:0 0 12px}.confirm-buttons{display:flex;gap:12px;margin-top:22px}.confirm-buttons button{flex:1;border:0;border-radius:10px;padding:12px;cursor:pointer;font-weight:750}.confirm-no{background:#e9edf5;color:#26385e}.confirm-yes{background:#dc2626;color:#fff}@media(max-width:390px){.item{gap:6px}.cart-actions{gap:6px}.qty{gap:5px}.delete-product{width:34px;height:34px}} .customer-details{border:1px solid #e4e9f3;border-radius:14px;padding:14px;margin-bottom:16px;background:#f8faff}.customer-details h3{font-size:16px;margin:0 0 11px}.customer-details label{display:block;font-size:13px;font-weight:750;margin:9px 0 5px}.customer-details input,.customer-details textarea,.customer-details select{width:100%;border:1px solid #d9e0eb;border-radius:10px;padding:10px;font:inherit;background:#fff}.customer-details textarea{resize:vertical;min-height:65px}.customer-details .hint{font-size:12px;color:#68768d;margin:8px 0 0}.foot{max-height:72vh;overflow-y:auto}.customer-details [hidden]{display:none!important} .checkout-shade{position:fixed;inset:0;background:#101a36b8;z-index:9;display:none;align-items:center;justify-content:center;padding:16px}.checkout-shade.show{display:flex}.checkout-box{background:#fff;border-radius:20px;padding:22px;width:min(480px,100%);max-height:92vh;overflow:auto;box-shadow:0 18px 55px #0003}.checkout-header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}.checkout-header h2{margin:0;font-size:22px}.checkout-actions{display:flex;gap:10px}.checkout-actions button{flex:1;padding:13px 8px;border-radius:11px;font-weight:750;cursor:pointer}.checkout-back{border:0;background:#e9edf5;color:#26385e}.checkout-box .customer-details{margin-bottom:18px}.checkout-box .customer-details h3{display:none}.transfer-info{background:#fff;border:1px solid #d9e0eb;border-radius:10px;padding:12px;line-height:1.9;font-size:13px}@media(max-width:390px){.checkout-actions{flex-direction:column}} .checkout-box .customer-details label{color:#18233b!important;font-weight:850!important;font-size:15px!important;opacity:1!important} .checkout-box .customer-details select{color:#18233b!important;font-weight:800!important;background-color:#fff!important;-webkit-text-fill-color:#18233b!important} .checkout-box .customer-details select option{color:#18233b;background:#fff;font-weight:750} /* Tipografía clara y sencilla en Datos de entrega */
+.checkout-box .customer-details,
+.checkout-box .customer-details label,
+.checkout-box .customer-details input,
+.checkout-box .customer-details textarea,
+.checkout-box .customer-details select,
+.checkout-box .customer-details select option,
+.checkout-box .customer-details .hint,
+.checkout-box .customer-details .transfer-info {
+ font-family: Arial, Helvetica, sans-serif !important;
+ font-weight: 400 !important;
+ color: #111111 !important;
+ -webkit-text-fill-color: #111111 !important;
+ opacity: 1 !important;
+}
+.checkout-box .customer-details input,
+.checkout-box .customer-details textarea,
+.checkout-box .customer-details select {
+ background-color: #ffffff !important;
+ caret-color: #111111 !important;
+}
+.checkout-box .customer-details input::placeholder,
+.checkout-box .customer-details textarea::placeholder {
+ color: #666666 !important;
+ -webkit-text-fill-color: #666666 !important;
+ opacity: 1;
+}
+.checkout-box .customer-details select option {background:#ffffff !important;}
+.checkout-box .customer-details label {font-size: 14px !important;}
+.checkout-box .customer-details strong {font-weight: 400 !important;}
+
+#cash-amount.cash-invalid{border:2px solid #dc2626!important;color:#dc2626!important;outline-color:#dc2626!important;background:#fff!important}
+#change-hint.cash-error{color:#dc2626!important;-webkit-text-fill-color:#dc2626!important;font-weight:400!important}
+.cash-label-error{color:#dc2626!important;-webkit-text-fill-color:#dc2626!important}
 </style>
-</head>
-<body>
-<main>
-<div class="icon" aria-hidden="true">🏪</div>
-<p class="brand">Tienda La Diana</p>
-<div class="status"><span class="status-dot"></span> Aviso importante</div>
-<h1>Temporalmente cerrada</h1>
-<p>En este momento nuestra tienda no está recibiendo pedidos.</p>
-<p>Estamos realizando algunos ajustes para brindarte un mejor servicio.</p>
-<div class="divider"></div>
-<p class="note">¡Gracias por tu comprensión! <span class="heart">♥</span><br>Volveremos pronto.</p>
-<footer>TIENDA LA DIANA · NOS VEMOS PRONTO</footer>
-</main>
-</body>
-</html>
+<style>
+.customer-details .field-required{border:2px solid #dc2626!important;background:#fff7f7!important;color:#111!important}
+.customer-details .field-error{display:block;color:#dc2626!important;font:normal 13px Arial,sans-serif!important;margin:4px 0 9px}
+.customer-details .field-error{color:#dc2626!important;font-family:Arial,sans-serif!important;font-weight:400!important}
+.customer-details label.field-label-error{color:#dc2626!important}
+.customer-details .field-required{border-color:#dc2626!important;color:#dc2626!important}
+</style>
+<style>
+/* Mensajes de validación: prioridad sobre los estilos generales del formulario */
+.checkout-box .customer-details .field-error,
+.checkout-box .customer-details span.field-error[role="alert"] {
+  color:#dc2626 !important;
+  -webkit-text-fill-color:#dc2626 !important;
+  font-family:Arial,Helvetica,sans-serif !important;
+  font-weight:400 !important;
+  opacity:1 !important;
+}
+.checkout-box .customer-details label.field-label-error {
+  color:#dc2626 !important;
+  -webkit-text-fill-color:#dc2626 !important;
+}
+</style><style>
+.hero{padding:0;background:linear-gradient(115deg,#202c61,#4769d9)}
+.hero-carousel{position:relative;min-height:300px;padding-top:42px;padding-bottom:58px;overflow:hidden}
+.hero-slide{display:none;position:relative;min-height:192px;padding-right:140px;animation:heroFade .5s ease}
+.hero-slide.active{display:block}
+.hero-slide h1{max-width:700px}
+.hero-slide p{max-width:600px}
+.slide-emoji{position:absolute;right:35px;top:55px;font-size:94px;filter:drop-shadow(0 8px 12px #1115)}
+.hero-controls{position:absolute;bottom:15px;left:22px;right:22px;display:flex;align-items:center;justify-content:center;gap:17px}
+.hero-arrow{border:1px solid #ffffff80;background:#ffffff20;color:white;border-radius:50%;height:32px;width:32px;cursor:pointer}
+.hero-dots{display:flex;gap:9px}
+.hero-dot{width:10px;height:10px;border-radius:50%;border:0;background:#ffffff80;cursor:pointer;padding:0}
+.hero-dot.active{background:#fff;width:24px;border-radius:8px}
+@keyframes heroFade{from{opacity:.15;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:600px){.hero-carousel{min-height:300px;padding-top:30px}.hero-slide{padding-right:0;min-height:215px}.hero-slide h1{font-size:32px;padding-right:35px}.hero-slide p{font-size:15px;padding-right:30px}.slide-emoji{right:0;top:0;font-size:34px;opacity:.75}}
+@media(prefers-reduced-motion:reduce){.hero-slide{animation:none}}
+</style><style>
+#secret-logo{cursor:pointer;user-select:none;-webkit-user-select:none}#secret-logo:focus-visible{outline:3px solid #f5b942;outline-offset:5px;border-radius:5px}
+#diana-secret{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:rgba(15,18,45,.78);padding:18px}
+#diana-secret.show{display:flex}#diana-secret-card{position:relative;background:linear-gradient(145deg,#fff9e8,#fff);color:#222;text-align:center;border:4px solid #f4bd43;border-radius:24px;padding:38px 25px;max-width:420px;width:100%;box-shadow:0 20px 80px #0008;animation:secretPop .5s cubic-bezier(.2,1.6,.5,1)}
+#diana-secret-card .secret-target{font-size:78px;line-height:1.2;animation:secretBounce 1.1s ease-in-out infinite alternate}#diana-secret-card h2{font-size:27px;margin:10px 0;color:#7a3e00}#diana-secret-card p{font-size:16px;line-height:1.5;color:#333}#secret-close{margin-top:18px;background:#a3274b;color:white;border:0;border-radius:12px;padding:13px 25px;font-size:16px;font-weight:700;cursor:pointer}
+.secret-confetti{position:fixed;top:-25px;left:var(--x);width:var(--w);height:var(--h);background:var(--c);transform:rotate(var(--r));pointer-events:none;z-index:100000;animation:secretFall var(--t) linear forwards}
+@keyframes secretFall{to{top:110vh;transform:translateX(var(--drift)) rotate(780deg);opacity:.8}}@keyframes secretPop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}@keyframes secretBounce{to{transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){#diana-secret-card,.secret-confetti,#diana-secret-card .secret-target{animation:none}}
+</style><style>
+#diana-secret-card{max-width:440px;padding:20px 20px 22px;max-height:95vh;overflow-y:auto}
+#diana-secret-card .secret-target{font-size:42px;animation:none}
+#diana-secret-card h2{font-size:23px;margin:5px 0}
+#diana-secret-card .game-intro{font-size:14px;margin:7px 0}
+.game-score{display:flex;justify-content:space-between;gap:8px;font-size:13px;background:#fff0c9;padding:10px;border-radius:10px;color:#543b12}
+#diana-secret-card .game-status{font-weight:700;color:#6d327a;margin:10px 0;font-size:15px}
+.game-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-width:288px;margin:0 auto}
+.game-cell{aspect-ratio:1;background:#f4f5ff;border:2px solid #c7c9eb;border-radius:12px;font-size:clamp(28px,7vw,44px);font-weight:800;cursor:pointer;color:#3e57a6;display:flex;align-items:center;justify-content:center;touch-action:manipulation}
+.game-cell:focus-visible{outline:3px solid #b45a00;outline-offset:1px}.game-cell:disabled{cursor:default;opacity:1}.game-cell.o{color:#b43d67}.game-cell.win{background:#fff0a0;border-color:#e9a61a}
+.game-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:15px}.game-buttons button{border:0;border-radius:11px;padding:11px 14px;font-weight:700;cursor:pointer;font-size:14px}
+#game-restart{background:#2659a8;color:white}#secret-close{margin-top:0;background:#a3274b;color:white}
+@media(max-width:380px){#diana-secret-card{padding:15px 12px}.game-score{font-size:11px}}
+</style><style>
+.pearl-overlay{position:fixed;inset:0;background:#10182bb8;z-index:99999;display:none;align-items:center;justify-content:center;padding:18px}
+.pearl-overlay.show{display:flex}
+.pearl-dialog{position:relative;width:min(100%,440px);background:#fff;border-radius:18px;padding:27px;color:#17243b;box-shadow:0 20px 70px #0005;text-align:center;font-family:Arial,Helvetica,sans-serif}
+.pearl-dialog h2{font-size:24px;margin:8px 0}.pearl-dialog p{margin:9px 0 15px}
+.pearl-close{position:absolute;right:12px;top:8px;border:0;background:none;font-size:29px;cursor:pointer;color:#333}
+.pearl-choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.pearl-choices label{padding:16px 9px;border:2px solid #cbd5e1;border-radius:12px;cursor:pointer;font-weight:700}
+.pearl-choices label:has(input:checked){border-color:#2563eb;background:#eff6ff}
+.pearl-choices input{accent-color:#2563eb}
+.pearl-buttons{display:flex;gap:10px;justify-content:center;margin-top:15px}
+.pearl-buttons button{padding:12px 16px;border-radius:10px;border:1px solid #94a3b8;cursor:pointer}
+.pearl-buttons button:last-child{background:#2563eb;border-color:#2563eb;color:white;font-weight:700}
+@media(max-width:380px){.pearl-choices{grid-template-columns:1fr}}
+</style><style>.preview-banner{background:#eaf2ff;color:#2944ae;border-bottom:1px solid #cddafa;padding:9px 15px;text-align:center;font-size:13px;font-weight:800;letter-spacing:.15px}</style><style>
+.icecream-overlay{position:fixed;inset:0;background:rgba(17,29,55,.70);z-index:100001;display:none;align-items:center;justify-content:center;padding:18px}
+.icecream-overlay.show{display:flex}
+.icecream-dialog{position:relative;width:min(100%,480px);border-radius:24px;padding:29px 24px;background:#fff;box-shadow:0 28px 95px #07132c55;text-align:center;color:#1c2c4f;font-family:Inter,system-ui,sans-serif}
+.icecream-close{position:absolute;top:9px;right:15px;background:transparent;border:0;font-size:32px;color:#62708b;cursor:pointer}
+.icecream-symbol{font-size:39px;margin-bottom:8px}.icecream-dialog h2{margin:0;font-size:25px;letter-spacing:-.7px}
+.icecream-product{font-weight:850;color:#3254c1;margin:9px 0 5px}.icecream-description{color:#697791;font-size:14px;margin:3px 0 22px}
+.icecream-sizes{display:grid;gap:11px;margin-bottom:15px}
+.icecream-option{display:flex;align-items:center;gap:13px;text-align:left;padding:17px 14px;border:2px solid #e0e6f1;border-radius:15px;cursor:pointer;transition:border-color .15s,background .15s}
+.icecream-option:has(input:checked){border-color:#4769d9;background:#f0f4ff}.icecream-option input{accent-color:#4769d9;width:19px;height:19px;flex-shrink:0}
+.icecream-option-info{flex:1;display:flex;flex-direction:column;gap:5px}.icecream-option-info strong{font-size:16px}.icecream-option-info small{color:#718099;font-size:12px}
+.icecream-amount{color:#2747bf;font-size:20px;white-space:nowrap}.icecream-error{color:#b42318;font-weight:700;font-size:13px;margin:9px 0}
+.icecream-error[hidden]{display:none}.icecream-actions{display:flex;gap:10px;margin-top:18px}.icecream-actions button{flex:1;padding:13px 10px;font-size:14px;font-weight:750;border-radius:11px;border:1px solid #d5deed;background:#f5f7fb;color:#35476e;cursor:pointer}.icecream-actions button:last-child{background:#4263eb;border-color:#4263eb;color:#fff}
+@media(max-width:400px){.icecream-dialog{padding:24px 15px}.icecream-amount{font-size:18px}}
+</style></head><body><div class="preview-banner">🧪 VERSIÓN DE PRUEBAS · SIN PUBLICAR · NUEVA CATEGORÍA HELADOS</div><header><div class="wrap nav"><div class="logo" id="secret-logo" role="button" tabindex="0" aria-label="Abarrotes La Diana">Abarrotes <span>La Diana</span></div><button class="cartbtn" onclick="toggleCart(true)">🛒 Carrito (<span id="count">0</span>)</button></div></header><section class="hero" aria-label="Presentaciones de la tienda">
+<div class="wrap hero-carousel">
+  <div class="hero-slide active" aria-hidden="false"><div class="tag">ABARROTES LA DIANA</div><h1>¡Bienvenido a Abarrotes La Diana!</h1><p>Abarrotes, botanas, refrescos y antojitos en un solo lugar. Elige una categoría y arma tu pedido.</p><span class="slide-emoji" aria-hidden="true">🛒</span></div>
+  <div class="hero-slide" aria-hidden="true"><div class="tag">PROMOCIONES</div><h1>¡Descubre nuestras promociones!</h1><p>Consulta las novedades y pregunta por las promociones disponibles de la tienda.</p><span class="slide-emoji" aria-hidden="true">🎉</span></div>
+  <div class="hero-slide" aria-hidden="true"><div class="tag">NUEVOS PRODUCTOS</div><h1>¡Siempre hay algo nuevo!</h1><p>Explora nuestro catálogo y descubre productos para tus antojos y compras diarias.</p><span class="slide-emoji" aria-hidden="true">✨</span></div>
+  <div class="hero-slide" aria-hidden="true"><div class="tag">COMPRA FÁCIL</div><h1>¡Arma tu pedido en minutos!</h1><p>Elige tus productos, ajusta las cantidades y prepara tu pedido por WhatsApp.</p><span class="slide-emoji" aria-hidden="true">📱</span></div>
+  <div class="hero-controls"><button type="button" class="hero-arrow" onclick="moveHero(-1)" aria-label="Presentación anterior">❮</button><div class="hero-dots" id="hero-dots" aria-label="Seleccionar presentación"></div><button type="button" class="hero-arrow" onclick="moveHero(1)" aria-label="Presentación siguiente">❯</button></div>
+</div></section><main class="wrap"><div class="sectiontop"><h2>Nuestros productos</h2><input id="search" placeholder="🔎 Buscar productos..." oninput="renderProducts()" aria-label="Buscar productos"></div><nav class="categories" aria-label="Categorías de productos"><button class="cat active" onclick="setCategory('Todas',this)">Todos</button><button class="cat" onclick="setCategory('Abarrotes',this)">🛒 Abarrotes</button><button class="cat" onclick="setCategory('Sabritas y galletas',this)">🍪 Sabritas y galletas</button><button class="cat" onclick="setCategory('Refrescos',this)">🥤 Refrescos</button><button class="cat" onclick="setCategory('Dulces',this)">🍬 Dulces</button><button class="cat" onclick="setCategory('Frappés, crepas y sodas',this)">🧋 Frappés, crepas y sodas</button><button class="cat" onclick="setCategory('Helados',this)">🍨 Helados</button></nav><div class="grid" id="products"></div></main><footer>Abarrotes La Diana · Precios ilustrativos · Pedidos por WhatsApp al 999 262 3936</footer><div id="added-notice" class="added-notice" role="status" aria-live="polite"></div><div class="shade" id="shade" onclick="toggleCart(false)"></div><aside class="panel" id="panel" aria-label="Carrito de compras"><div class="panelhead"><h2>Tu carrito 🛒</h2><button class="close" onclick="toggleCart(false)" aria-label="Cerrar">×</button></div><div class="items" id="items"></div><div class="foot"><div class="total"><span>Total</span><span id="total">$0 MXN</span></div><div class="foot-actions"><button class="btn" onclick="openCheckout()">✓ Confirmar pedido</button><button class="clear-cart" id="clear-cart" onclick="requestClearCart()" title="Vaciar todo el carrito" aria-label="Vaciar todo el carrito"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M5 6l1 15h12l1-15M10 10v7M14 10v7"/></svg></button></div><p class="note">Precios de ejemplo sujetos a actualización. El pedido se prepara para WhatsApp. No se realizan cobros.</p></div></aside><div class="checkout-shade" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title"><div class="checkout-box"><div class="checkout-header"><h2 id="checkout-title">Datos de entrega</h2><button class="close" type="button" onclick="closeCheckout()" aria-label="Cerrar">×</button></div><section class="customer-details" aria-label="Datos de entrega"><h3>📋 Datos de entrega</h3><label for="customer-name">Nombre del cliente</label><input id="customer-name" autocomplete="name" placeholder="Tu nombre" maxlength="100" oninput="saveCustomer()"><label for="customer-phone">Número telefónico</label><input id="customer-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10 dígitos" maxlength="20" oninput="saveCustomer()"><label for="delivery-method">¿Cómo recibirás tu pedido?</label><select id="delivery-method" onchange="updateDelivery()"><option value="recoger">Recoger en tienda</option><option value="domicilio">Entrega a domicilio</option></select><div id="delivery-address-wrap" hidden><label for="delivery-address">Dirección de entrega</label><textarea id="delivery-address" placeholder="Calle, número, colonia y referencias" maxlength="500" oninput="saveCustomer()"></textarea></div><label for="payment-method">Método de pago</label><select id="payment-method" onchange="updatePayment()"><option value="efectivo">Efectivo</option><option value="transferencia">Transferencia bancaria</option></select><div id="cash-wrap"><label id="cash-label" for="cash-amount">Monto a pagar</label><input id="cash-amount" type="text" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*" placeholder="Ej. 200" oninput="updateCashChange();saveCustomer()"><p class="hint" id="change-hint" aria-live="polite">Ingresa el monto para calcular tu cambio.</p></div><div id="transfer-wrap" hidden><p class="hint"><strong>Datos para realizar la transferencia</strong></p><div class="transfer-info">Banco: <strong>Pendiente de configurar</strong><br>Titular: <strong>Pendiente de configurar</strong><br>CLABE o número de cuenta: <strong>Pendiente de configurar</strong></div><p class="hint">Solicita los datos bancarios oficiales a la tienda antes de transferir. No realices pagos a cuentas no verificadas.</p><label for="transfer-reference">Referencia o folio de transferencia (opcional)</label><input id="transfer-reference" placeholder="Folio o referencia" maxlength="100" oninput="saveCustomer()"></div><p class="hint">Estos datos se incluirán en el mensaje de WhatsApp. El costo de entrega, si aplica, se confirma con la tienda. La página no procesa pagos.</p></section><div class="checkout-actions"><button type="button" class="checkout-back" onclick="closeCheckout()">Volver al carrito</button><button type="button" class="btn" onclick="copyOrder()">🟢 Enviar pedido por WhatsApp</button></div></div></div><div class="confirm-shade" id="confirm-delete" role="dialog" aria-modal="true" aria-labelledby="confirm-title"><div class="confirm-box"><h3 id="confirm-title">¿Deseas eliminar?</h3><p id="confirm-product"></p><div class="confirm-buttons"><button class="confirm-no" onclick="closeDelete()">No</button><button class="confirm-yes" onclick="acceptDelete()">Sí</button></div></div></div><script>const products=[
+{id:1,name:'Arroz 1 kg',price:35,icon:'🍚',category:'Abarrotes',description:'Bolsa de arroz de 1 kg.'},
+{id:2,name:'Frijol 1 kg',price:48,icon:'🫘',category:'Abarrotes',description:'Bolsa de frijol de 1 kg.'},
+{id:3,name:'Aceite vegetal 900 ml',price:45,icon:'🫗',category:'Abarrotes',description:'Aceite para cocinar.'},
+{id:4,name:'Sabritas originales',price:20,icon:'🥔',category:'Sabritas y galletas',description:'Papas fritas clásicas.'},
+{id:5,name:'Galletas de chocolate',price:22,icon:'🍪',category:'Sabritas y galletas',description:'Paquete de galletas.'},
+{id:6,name:'Galletas saladas',price:19,icon:'🍘',category:'Sabritas y galletas',description:'Paquete de galletas saladas.'},
+{id:7,name:'Refresco de cola 600 ml',price:22,icon:'🥤',category:'Refrescos',description:'Botella individual.'},
+{id:8,name:'Refresco de naranja 600 ml',price:20,icon:'🍊',category:'Refrescos',description:'Botella individual.'},
+{id:9,name:'Agua mineral 600 ml',price:19,icon:'🫧',category:'Refrescos',description:'Botella individual.'},
+{id:10,name:'Frappé de moka',price:65,icon:'🧋',category:'Frappés, crepas y sodas',description:'Bebida fría de café y chocolate.'},
+{id:11,name:'Crepa de Nutella',price:70,icon:'🥞',category:'Frappés, crepas y sodas',description:'Crepa dulce recién preparada.'},
+{id:12,name:'Soda italiana de fresa',price:55,icon:'🍓',category:'Frappés, crepas y sodas',description:'Bebida fría sabor fresa.'},
+{id:13,name:'Paleta de caramelo',price:8,icon:'🍭',category:'Dulces',description:'Producto de ejemplo; ajusta el precio y disponibilidad.'},
+{id:14,name:'Gomitas surtidas',price:18,icon:'🍬',category:'Dulces',description:'Producto de ejemplo; ajusta el precio y disponibilidad.'},
+{id:15,name:'Chocolate individual',price:20,icon:'🍫',category:'Dulces',description:'Producto de ejemplo; ajusta el precio y disponibilidad.'},
+{id:101,name:'Helado de tiramisú',price:null,icon:'🍨',category:'Helados',description:'Helado sabor tiramisú.'},
+{id:102,name:'Helado de aguacate',price:null,icon:'🥑',category:'Helados',description:'Helado sabor aguacate.'},
+{id:103,name:'Helado de pan de muerto',price:null,icon:'🍨',category:'Helados',description:'Helado sabor pan de muerto.'},
+{id:104,name:'Helado de calabaza',price:null,icon:'🎃',category:'Helados',description:'Helado sabor calabaza.'}
+];let cart={};try{cart=JSON.parse(localStorage.getItem('laDianaCart')||'{}')}catch(e){}const hasPrice=p=>typeof p.price==='number'&&Number.isFinite(p.price);const money=n=>new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(n);function save(){localStorage.setItem('laDianaCart',JSON.stringify(cart));renderCart()}const isItalianSoda=p=>!!p&&/soda\s+italiana/i.test(p.name);
+const isIceCream=p=>!!p&&p.category==='Helados';
+const iceCreamOptions={vaso:{label:'Vaso',price:35},medio_litro:{label:'Medio litro',price:130}};
+const cartEntries=()=>Object.entries(cart).filter(([key,qty])=>Number(qty)>0).map(([key,qty])=>{const [id,flavor]=String(key).split('|');const p=products.find(p=>String(p.id)===id);if(!p)return null;const option=isIceCream(p)?iceCreamOptions[flavor]:null;return {p,key,qty:Number(qty),flavor:flavor||'',unitPrice:option?option.price:p.price,variantLabel:option?option.label:''}}).filter(Boolean);
+const cartEntryLabel=e=>e.variantLabel?' · '+e.variantLabel:(e.flavor&&!isIceCream(e.p)?' · Perlas de '+(e.flavor==='maracuya'?'maracuyá':'fresa'):'');
+const cartTotal=()=>cartEntries().reduce((sum,e)=>sum+(Number.isFinite(e.unitPrice)?e.unitPrice*e.qty:0),0);
+let pendingIceCream=null;
+function openIceCreamModal(product){
+  pendingIceCream=product;
+  document.getElementById('icecream-product-name').textContent=product.name;
+  document.querySelectorAll('input[name="icecream-size"]').forEach(r=>r.checked=false);
+  document.getElementById('icecream-error').hidden=true;
+  const modal=document.getElementById('icecream-modal');modal.classList.add('show');modal.setAttribute('aria-hidden','false');
+  document.querySelector('input[name="icecream-size"]').focus();
+}
+function closeIceCreamModal(){const m=document.getElementById('icecream-modal');m.classList.remove('show');m.setAttribute('aria-hidden','true');pendingIceCream=null}
+function confirmIceCream(){
+  if(!pendingIceCream)return;
+  const size=document.querySelector('input[name="icecream-size"]:checked')?.value;
+  if(!size||!iceCreamOptions[size]){document.getElementById('icecream-error').hidden=false;return}
+  const key=pendingIceCream.id+'|'+size;
+  cart[key]=(cart[key]||0)+1;
+  save();closeIceCreamModal();showAddedFeedback(1);
+}
+let pendingPearls=null;
+function closePearls(){document.getElementById('pearl-modal').classList.remove('show');document.getElementById('pearl-modal').setAttribute('aria-hidden','true');pendingPearls=null}
+function confirmPearls(){if(!pendingPearls)return;const flavor=document.querySelector('input[name="pearl-flavor"]:checked')?.value;if(!flavor){document.getElementById('pearl-error').style.display='block';return}
+const {id,qty}=pendingPearls;const key=id+'|'+flavor;cart[key]=(cart[key]||0)+qty;save();const field=document.getElementById('pieces-'+id);if(field)field.value=1;closePearls();showAddedFeedback(qty)}
+function add(id){const field=document.getElementById("pieces-"+id);const qty=field?Number(field.value):1;if(!Number.isInteger(qty)||qty<1||qty>999){alert("Elige entre 1 y 999 piezas.");return}const product=products.find(p=>p.id===id);if(isIceCream(product)){openIceCreamModal(product);return}if(isItalianSoda(product)){pendingPearls={id,qty};document.getElementById('pearl-product-name').textContent=product.name+' · '+qty+' '+(qty===1?'pieza':'piezas');document.querySelectorAll('input[name="pearl-flavor"]').forEach(x=>x.checked=false);document.getElementById('pearl-error').style.display='none';document.getElementById('pearl-modal').classList.add('show');document.getElementById('pearl-modal').setAttribute('aria-hidden','false');document.querySelector('input[name="pearl-flavor"]').focus();return}cart[id]=(cart[id]||0)+qty;save();if(field)field.value=1;showAddedFeedback(qty)}function showAddedFeedback(qty){const notice=document.getElementById("added-notice");notice.textContent=`✓ ${qty} ${qty===1?"pieza agregada":"piezas agregadas"} al carrito`;notice.classList.add("visible");clearTimeout(window.addedNoticeTimer);window.addedNoticeTimer=setTimeout(()=>notice.classList.remove("visible"),2200)}function stepPieces(id,delta){const field=document.getElementById("pieces-"+id);if(field){const value=parseInt(field.value,10)||1;field.value=Math.max(1,Math.min(999,value+delta))}}function change(id,n){const current=cart[id]||0;if(n<0&&current<=1)return;cart[id]=Math.min(999,current+n);save()}let pendingDelete=null;function requestClearCart(){if(!Object.values(cart).some(n=>n>0))return;pendingDelete="all";document.getElementById("confirm-title").textContent="¿Deseas vaciar todo el carrito?";document.getElementById("confirm-product").textContent="Se eliminarán todos los productos y cantidades de tu pedido. Esta acción no se puede deshacer.";document.getElementById("confirm-delete").classList.add("show")}function removeProduct(id){pendingDelete=id;document.getElementById("confirm-title").textContent="¿Deseas eliminar este producto?";const p=products.find(x=>String(x.id)===String(id).split('|')[0]);const flavor=String(id).split('|')[1];const label=isIceCream(p)?(iceCreamOptions[flavor]?.label||''):(flavor?'perlas de '+(flavor==='maracuya'?'maracuyá':'fresa'):'');document.getElementById('confirm-product').textContent=p?`¿Deseas eliminar ${p.name}${label?' ('+label+')':''} del carrito?`:'¿Deseas eliminar este producto del carrito?';document.getElementById('confirm-delete').classList.add('show')}function closeDelete(){pendingDelete=null;document.getElementById('confirm-delete').classList.remove('show')}function acceptDelete(){if(pendingDelete!==null){if(pendingDelete==="all")cart={};else delete cart[pendingDelete];save()}closeDelete()}let currentCategory='Todas';function setCategory(category,button){currentCategory=category;document.querySelectorAll('.cat').forEach(el=>el.classList.toggle('active',el===button));renderProducts()}function renderProducts(){let q=document.getElementById('search').value.toLowerCase();document.getElementById('products').innerHTML=products.filter(p=>(currentCategory==='Todas'||p.category===currentCategory)&&(p.name+' '+p.category).toLowerCase().includes(q)).map(p=>`<article class="product"><div class="picture" aria-hidden="true">${p.icon}</div><div class="body"><div class="muted">${p.category}</div><h3>${p.name}</h3><div class="desc">${p.description}</div>${hasPrice(p)?`<div class="bottom"><span class="price">${money(p.price)}</span></div>`:''}<div class="purchase">${hasPrice(p)?`<label for="pieces-${p.id}">Piezas:</label><div class="piece-stepper"><button type="button" onclick="stepPieces(${p.id},-1)" aria-label="Quitar una pieza de ${p.name}">−</button><input class="piece-select" id="pieces-${p.id}" type="number" min="1" max="999" step="1" value="1" aria-label="Cantidad de ${p.name}"><button type="button" onclick="stepPieces(${p.id},1)" aria-label="Agregar una pieza de ${p.name}">+</button></div>`:''}<button class="btn" onclick="add(${p.id})">+ Agregar al carrito</button></div></div></article>`).join('')||'<p>No encontramos productos con ese nombre.</p>'}function renderCart(){const selected=cartEntries();document.getElementById('count').textContent=selected.reduce((sum,e)=>sum+e.qty,0);document.getElementById('items').innerHTML=selected.length?selected.map(({p,key,qty,flavor,unitPrice,variantLabel})=>{const safeKey=JSON.stringify(key).replace(/"/g,'&quot;');const detail=variantLabel?' · '+variantLabel:(flavor&&!isIceCream(p)?' · Perlas de '+(flavor==='maracuya'?'maracuyá':'fresa'):(isIceCream(p)?' · Presentación sin elegir (pedido anterior)':(isItalianSoda(p)?' · Perlas sin especificar (pedido anterior)':'')));return `<div class="item"><div class="item-info"><div class="item-title"><strong>${p.icon} ${p.name}${detail}</strong><button class="delete-product" onclick="removeProduct(${safeKey})" title="Eliminar producto del carrito" aria-label="Eliminar producto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M5 6l1 15h12l1-15M10 10v7M14 10v7"/></svg></button></div><div class="muted">${Number.isFinite(unitPrice)?money(unitPrice)+' c/u':'Presentación por confirmar'}</div></div><div class="cart-actions"><div class="qty"><button onclick="change(${safeKey},-1)" aria-label="Restar una pieza">−</button><strong>${qty}</strong><button onclick="change(${safeKey},1)" aria-label="Sumar una pieza">+</button></div></div></div>`}).join(''):'<p style="color:#7a879b">Tu carrito está vacío. Agrega algún producto para empezar.</p>';document.getElementById('clear-cart').disabled=!selected.length;document.getElementById('total').textContent=money(cartTotal())+(selected.some(e=>!Number.isFinite(e.unitPrice))?' + presentación por confirmar':'')}
+function toggleCart(show){document.getElementById('panel').classList.toggle('show',show);document.getElementById('shade').classList.toggle('show',show)}function saveCustomer(){const data={name:document.getElementById('customer-name').value,method:document.getElementById('delivery-method').value,address:document.getElementById('delivery-address').value,phone:document.getElementById('customer-phone').value,payment:document.getElementById('payment-method').value,cash:document.getElementById('cash-amount').value,reference:document.getElementById('transfer-reference').value};localStorage.setItem('laDianaCustomer',JSON.stringify(data))}function updateDelivery(){document.getElementById('delivery-address-wrap').hidden=document.getElementById('delivery-method').value!=='domicilio';saveCustomer()}function loadCustomer(){try{const d=JSON.parse(localStorage.getItem('laDianaCustomer')||'{}');document.getElementById('customer-name').value=d.name||'';document.getElementById('delivery-method').value=d.method==='domicilio'?'domicilio':'recoger';document.getElementById('delivery-address').value=d.address||'';document.getElementById('customer-phone').value=d.phone||'';document.getElementById('payment-method').value=d.payment==='transferencia'?'transferencia':'efectivo';document.getElementById('cash-amount').value=d.cash||'';document.getElementById('transfer-reference').value=d.reference||''}catch(e){}document.getElementById('delivery-address-wrap').hidden=document.getElementById('delivery-method').value!=='domicilio';updatePayment(false)}function updatePayment(shouldSave=true){const transfer=document.getElementById('payment-method').value==='transferencia';document.getElementById('cash-wrap').hidden=transfer;document.getElementById('transfer-wrap').hidden=!transfer;if(shouldSave)saveCustomer()}function updateCashChange(){const total=cartTotal();const field=document.getElementById('cash-amount');const raw=field.value.trim().replace(',','.');const amount=Number(raw);const hint=document.getElementById('change-hint');const invalid=raw!==''&&(!Number.isFinite(amount)||amount<total);field.classList.toggle('cash-invalid',invalid);document.getElementById('cash-label').classList.toggle('cash-label-error',invalid);field.setAttribute('aria-invalid',String(invalid));hint.classList.toggle('cash-error',invalid);hint.textContent=raw===''?'Ingresa el monto para calcular tu cambio.':invalid?'El monto debe ser igual o mayor al total de la compra ('+money(total)+').':'Cambio estimado: '+money(amount-total)}function openCheckout(){clearFieldErrors();if(!cartEntries().length){alert("Agrega productos al carrito primero.");return}updateCashChange();document.getElementById("checkout-modal").classList.add("show");document.getElementById("customer-name").focus()}function closeCheckout(){clearFieldErrors();document.getElementById("checkout-modal").classList.remove("show")}function clearFieldErrors(){document.querySelectorAll('.field-error').forEach(e=>e.remove());document.querySelectorAll('.field-required').forEach(e=>{e.classList.remove('field-required');e.removeAttribute('aria-describedby')});document.querySelectorAll('.field-label-error').forEach(e=>e.classList.remove('field-label-error'))}
+function requireField(id,message){const el=document.getElementById(id);el.classList.add('field-required');document.querySelector('label[for="'+id+'"]')?.classList.add('field-label-error');const msg=document.createElement('span');msg.className='field-error';msg.id=id+'-error';msg.setAttribute('role','alert');msg.textContent=message;el.insertAdjacentElement('afterend',msg);el.setAttribute('aria-describedby',msg.id);return el}
+function validateOrderFields(){clearFieldErrors();let first=null;const check=(id,bad,message)=>{if(bad){const el=requireField(id,message);if(!first)first=el}};const name=document.getElementById('customer-name').value.trim();const phone=document.getElementById('customer-phone').value.replace(/\D/g,'');const delivery=document.getElementById('delivery-method').value;const payment=document.getElementById('payment-method').value;const total=cartTotal();const raw=document.getElementById('cash-amount').value.trim().replace(',','.');const amount=Number(raw);check('customer-name',!name,'Esta información es obligatoria. Ingresa tu nombre.');check('customer-phone',!phone||phone.length!==10,!phone?'Esta información es obligatoria. Ingresa tu número telefónico.':'El teléfono debe contener 10 dígitos.');if(delivery==='domicilio')check('delivery-address',!document.getElementById('delivery-address').value.trim(),'Esta información es obligatoria. Ingresa tu dirección de entrega.');if(payment==='efectivo')check('cash-amount',!raw||!Number.isFinite(amount)||amount<total,!raw?'Esta información es obligatoria. Ingresa el monto a pagar.':'El monto debe ser igual o mayor al total de la compra ('+money(total)+').');if(first){first.focus();return false}return true}
+document.addEventListener('input',e=>{if(e.target.classList&&e.target.classList.contains('field-required')){const el=e.target;el.classList.remove('field-required');document.querySelector('label[for="'+el.id+'"]')?.classList.remove('field-label-error');el.removeAttribute('aria-describedby');document.getElementById(el.id+'-error')?.remove()}});
+function copyOrder(){if(!validateOrderFields())return;let selected=cartEntries();if(!selected.length){alert('Agrega productos primero.');return}const name=document.getElementById('customer-name').value.trim();const method=document.getElementById('delivery-method').value;const address=document.getElementById('delivery-address').value.trim();const phone=document.getElementById('customer-phone').value.trim();const payment=document.getElementById('payment-method').value;const cash=Number(document.getElementById('cash-amount').value);const reference=document.getElementById('transfer-reference').value.trim();if(!name){alert('Escribe el nombre del cliente para copiar el pedido.');document.getElementById('customer-name').focus();return}if(!/^\d{10}$/.test(phone.replace(/\D/g,''))){alert('Escribe un número telefónico válido de 10 dígitos.');document.getElementById('customer-phone').focus();return}if(method==='domicilio'&&!address){alert('Escribe la dirección de entrega.');document.getElementById('delivery-address').focus();return}let total=cartTotal();if(payment==='efectivo'&&(!Number.isFinite(cash)||cash<total)){alert('Indica un monto en efectivo igual o mayor al total: '+money(total));document.getElementById('cash-amount').focus();return}let msg='Hola, quiero hacer un pedido de Abarrotes La Diana:\nCliente: '+name+'\nEntrega: '+(method==='domicilio'?'A domicilio':'Recoger en tienda')+(method==='domicilio'?'\nDirección: '+address:'')+'\n\nProductos:\n'+selected.map(e=>`${e.qty} × ${e.p.name}${cartEntryLabel(e)?' ('+cartEntryLabel(e).trim().replace(/^·\s*/,'')+')':''} — ${Number.isFinite(e.unitPrice)?money(e.unitPrice*e.qty):'Presentación por confirmar'}`).join('\n')+'\nTotal de productos: '+money(total)+(selected.some(e=>!Number.isFinite(e.unitPrice))?'\nHay productos de pedidos anteriores sin presentación definida.':'')+'\nPago: '+(payment==='efectivo'?'Efectivo\nPaga con: '+money(cash)+'\nCambio estimado: '+money(cash-total):'Transferencia bancaria (datos bancarios por confirmar)'+(reference?'\nReferencia: '+reference:''))+'\n'+(method==='domicilio'?'Costo de envío por confirmar.':'');const whatsappTienda='529992623936'; // WhatsApp oficial de Abarrotes La Diana (México +52)
+const url='https://api.whatsapp.com/send?'+(whatsappTienda?'phone='+encodeURIComponent(whatsappTienda)+'&':'')+'text='+encodeURIComponent(msg+'\nTeléfono: '+phone);
+const win=window.open(url,'_blank','noopener,noreferrer');
+if(!win){window.location.href=url}
+closeCheckout()}loadCustomer();renderProducts();renderCart();</script><script>
+let heroIndex=0;
+const heroSlides=Array.from(document.querySelectorAll('.hero-slide'));
+const heroDots=document.getElementById('hero-dots');
+heroSlides.forEach((_,i)=>{const b=document.createElement('button');b.className='hero-dot'+(i===0?' active':'');b.type='button';b.setAttribute('aria-label','Ver presentación '+(i+1));b.onclick=()=>showHero(i);heroDots.appendChild(b)});
+function showHero(i){heroIndex=(i+heroSlides.length)%heroSlides.length;heroSlides.forEach((el,j)=>{const active=j===heroIndex;el.classList.toggle('active',active);el.setAttribute('aria-hidden',String(!active))});heroDots.querySelectorAll('button').forEach((el,j)=>el.classList.toggle('active',j===heroIndex))}
+function moveHero(delta){showHero(heroIndex+delta);restartHero()}
+let heroTimer;
+function restartHero(){clearInterval(heroTimer);if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)heroTimer=setInterval(()=>{if(!document.hidden)showHero(heroIndex+1)},5000)}
+restartHero();
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)restartHero()});
+</script><div id="diana-secret" role="dialog" aria-modal="true" aria-labelledby="secret-title" aria-hidden="true"><div id="diana-secret-card"><div class="secret-target" aria-hidden="true">🎯🐱</div><h2 id="secret-title">¡Gato secreto de La Diana!</h2><p class="game-intro">¡Encontraste el juego oculto! Juega con ❌ contra la computadora ⭕.</p><div class="game-score" aria-label="Marcador"><span>🏆 Tú: <b id="game-wins">0</b></span><span>🤝 Empates: <b id="game-draws">0</b></span><span>🤖 PC: <b id="game-losses">0</b></span></div><p id="game-status" class="game-status" role="status" aria-live="polite">¡Tu turno! Elige una casilla.</p><div id="game-board" class="game-board" role="group" aria-label="Tablero de gato de nueve casillas"></div><div class="game-buttons"><button type="button" id="game-restart">🔄 Nueva partida</button><button type="button" id="secret-close">Cerrar juego</button></div></div></div><script>
+(function(){
+ const logo=document.getElementById('secret-logo'),modal=document.getElementById('diana-secret'),close=document.getElementById('secret-close');
+ let taps=0,lastTap=0,previousFocus=null;
+ function hideSecret(){modal.classList.remove('show');modal.setAttribute('aria-hidden','true');document.querySelectorAll('.secret-confetti').forEach(e=>e.remove());if(previousFocus)previousFocus.focus()}
+ function showSecret(){previousFocus=document.activeElement;modal.classList.add('show');modal.setAttribute('aria-hidden','false');close.focus();if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){const colors=['#ffd54f','#ef476f','#06d6a0','#118ab2','#ffffff'];for(let i=0;i<85;i++){const piece=document.createElement('span');piece.className='secret-confetti';piece.style.setProperty('--x',Math.random()*100+'vw');piece.style.setProperty('--w',6+Math.random()*9+'px');piece.style.setProperty('--h',7+Math.random()*12+'px');piece.style.setProperty('--c',colors[i%colors.length]);piece.style.setProperty('--r',Math.random()*360+'deg');piece.style.setProperty('--t',2+Math.random()*2+'s');piece.style.setProperty('--drift',(Math.random()*200-100)+'px');document.body.appendChild(piece);piece.addEventListener('animationend',()=>piece.remove(),{once:true})}}}
+ function secretTap(){const now=Date.now();taps=(now-lastTap>3500)?1:taps+1;lastTap=now;if(taps>=5){taps=0;showSecret()}}
+ logo.addEventListener('click',secretTap);
+ logo.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();secretTap()}});
+ close.addEventListener('click',hideSecret);
+ modal.addEventListener('click',e=>{if(e.target===modal)hideSecret()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('show'))hideSecret()});
+})();
+</script><script>
+(function(){
+ const boardEl=document.getElementById('game-board'),status=document.getElementById('game-status');
+ const winEl=document.getElementById('game-wins'),drawEl=document.getElementById('game-draws'),lossEl=document.getElementById('game-losses');
+ const lines=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+ let board=Array(9).fill(''),finished=false,thinking=false,turnToken=0,score={wins:0,draws:0,losses:0};
+ try{const saved=JSON.parse(localStorage.getItem('laDianaGatoScore')||'{}');for(const key of Object.keys(score))if(Number.isInteger(saved[key])&&saved[key]>=0)score[key]=saved[key]}catch(e){}
+ function updateScore(){winEl.textContent=score.wins;drawEl.textContent=score.draws;lossEl.textContent=score.losses}
+ function result(b){for(const line of lines){const [a,c,d]=line;if(b[a]&&b[a]===b[c]&&b[a]===b[d])return {winner:b[a],line}}return b.every(Boolean)?{winner:'draw',line:[]}:null}
+ function render(winLine=[]){boardEl.replaceChildren();board.forEach((mark,i)=>{const btn=document.createElement('button');btn.type='button';btn.className='game-cell'+(mark==='O'?' o':'')+(winLine.includes(i)?' win':'');btn.textContent=mark==='X'?'✕':mark==='O'?'◯':'';btn.setAttribute('aria-label','Casilla '+(i+1)+(mark?', '+(mark==='X'?'tu marca':'marca de computadora'):', vacía'));btn.disabled=Boolean(mark)||finished||thinking;btn.addEventListener('click',()=>playerMove(i));boardEl.appendChild(btn)})}
+ function finish(r){if(!r)return false;finished=true;if(r.winner==='X'){score.wins++;status.textContent='🎉 ¡Ganaste! ¡Excelente jugada!'}else if(r.winner==='O'){score.losses++;status.textContent='🤖 Ganó la computadora. ¡Inténtalo otra vez!'}else{score.draws++;status.textContent='🤝 ¡Empate! Buena partida.'}try{localStorage.setItem('laDianaGatoScore',JSON.stringify(score))}catch(e){}updateScore();render(r.line);return true}
+ function minimax(b,computer){const r=result(b);if(r)return r.winner==='O'?10:r.winner==='X'?-10:0;let best=computer?-Infinity:Infinity;for(let i=0;i<9;i++){if(b[i])continue;b[i]=computer?'O':'X';const value=minimax(b,!computer);b[i]='';best=computer?Math.max(best,value):Math.min(best,value)}return best}
+ function computerMove(token){if(token!==turnToken||finished)return;let best=-Infinity,choices=[];for(let i=0;i<9;i++){if(board[i])continue;board[i]='O';const value=minimax(board,false);board[i]='';if(value>best){best=value;choices=[i]}else if(value===best)choices.push(i)}if(!choices.length)return;const pick=choices[Math.floor(Math.random()*choices.length)];board[pick]='O';thinking=false;if(!finish(result(board))){status.textContent='¡Tu turno! Elige una casilla.';render()}}
+ function playerMove(i){if(finished||thinking||board[i])return;board[i]='X';if(finish(result(board)))return;thinking=true;status.textContent='🤖 La computadora está pensando…';render();const token=turnToken;setTimeout(()=>computerMove(token),350)}
+ function reset(){turnToken++;board=Array(9).fill('');finished=false;thinking=false;status.textContent='¡Tu turno! Elige una casilla.';render()}
+ document.getElementById('game-restart').addEventListener('click',reset);
+ document.getElementById('secret-logo').addEventListener('click',()=>{if(document.getElementById('diana-secret').classList.contains('show'))reset()});
+ document.getElementById('secret-logo').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&document.getElementById('diana-secret').classList.contains('show'))reset()});
+ updateScore();reset();
+})();
+</script><div class="pearl-overlay" id="pearl-modal" role="dialog" aria-modal="true" aria-labelledby="pearl-title" aria-hidden="true">
+<div class="pearl-dialog">
+<button class="pearl-close" type="button" onclick="closePearls()" aria-label="Cerrar">×</button>
+<div style="font-size:38px">🧋</div><h2 id="pearl-title">¿Qué perlas deseas poner?</h2>
+<p id="pearl-product-name"></p><p>Elige una opción para agregar tu soda italiana al carrito.</p>
+<div class="pearl-choices">
+<label><input type="radio" name="pearl-flavor" value="maracuya"> 🟡 Maracuyá</label>
+<label><input type="radio" name="pearl-flavor" value="fresa"> 🍓 Fresa</label>
+</div>
+<p id="pearl-error" role="alert" style="color:#b91c1c;display:none">Selecciona un sabor de perlas para continuar.</p>
+<div class="pearl-buttons"><button type="button" onclick="closePearls()">Cancelar</button><button type="button" onclick="confirmPearls()">Agregar al carrito</button></div>
+</div></div><div class="icecream-overlay" id="icecream-modal" role="dialog" aria-modal="true" aria-labelledby="icecream-title" aria-hidden="true">
+  <div class="icecream-dialog">
+    <button class="icecream-close" type="button" onclick="closeIceCreamModal()" aria-label="Cerrar ventana">×</button>
+    <div class="icecream-symbol" aria-hidden="true">🍨</div>
+    <h2 id="icecream-title">Elige la presentación</h2>
+    <p class="icecream-product" id="icecream-product-name"></p>
+    <p class="icecream-description">¿En qué tamaño deseas tu helado?</p>
+    <div class="icecream-sizes">
+      <label class="icecream-option"><input type="radio" name="icecream-size" value="medio_litro"><span class="icecream-option-info"><strong>Medio litro</strong><small>Para compartir o disfrutar después</small></span><strong class="icecream-amount">$130</strong></label>
+      <label class="icecream-option"><input type="radio" name="icecream-size" value="vaso"><span class="icecream-option-info"><strong>Vaso</strong><small>Porción individual</small></span><strong class="icecream-amount">$35</strong></label>
+    </div>
+    <p class="icecream-error" id="icecream-error" role="alert" hidden>Selecciona una presentación para continuar.</p>
+    <div class="icecream-actions"><button type="button" onclick="closeIceCreamModal()">Cancelar</button><button type="button" onclick="confirmIceCream()">Agregar al carrito</button></div>
+  </div>
+</div></body></html>
